@@ -2,6 +2,7 @@ import './signin.css';
 import icons from '../../assets//icons'
 import images from '../../assets/images'
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 export default function Signin() {
 
@@ -14,6 +15,9 @@ export default function Signin() {
 
   return (
     <div className="signin-container">
+      <Helmet>
+        <title>Sign In - Innovation Center</title>
+      </Helmet>
       <div className="signin-box">
         <img
           src={icons.icon3}

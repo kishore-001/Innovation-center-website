@@ -1,0 +1,46 @@
+/* Sidebar */
+.db-sidebar {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    height: calc(100vh - 60px);
+}
+
+.db-sb-icon {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.db-sb-icon img {
+    width: 50px;
+    height: 30px;
+}
+
+.db-sb-icon p {
+    margin: 5px ;
+    font-size: 0.8em;
+    color: #000000;
+    font-weight: bold;
+}
+
+.db-sb-icon p p {
+    color:red;
+    margin-bottom: 100px;
+}
+
+.db-sb-items {
+    margin: 30px 0;
+}
+
+.db-sb-items img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}

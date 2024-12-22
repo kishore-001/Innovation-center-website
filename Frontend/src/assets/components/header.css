@@ -1,0 +1,61 @@
+/* Header */
+.db-header {
+    display: flex;
+    width: calc(100vw - 150px);
+    margin-right: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.db-hd-box1{
+    height: inherit;
+    width: 85%;
+    text-align: center;
+}
+
+.db-hd-box2{
+    width: 15%;
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.db-title {
+    color: #000000;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.db-acc, .db-logout {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.db-username {
+    margin: 0 20px;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.db-button{
+    width: 100px;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.db-button:hover {
+    background-color: #333;
+}

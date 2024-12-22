@@ -2,6 +2,7 @@ import './register.css'
 import icons from '../../assets//icons'
 import images from '../../assets/images'
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 export default function Register() {
   const navigate = useNavigate()
@@ -12,6 +13,7 @@ export default function Register() {
   }
   return (
     <div className="reg-container">
+      <Helmet> <title>Register - Innovation Center</title> </Helmet>
       <div className="reg-box">
         <img
           src={icons.icon3}

@@ -1,8 +1,8 @@
 import "./Dashboard.css"
 import images from "../../assets/images"
 import { Helmet } from "react-helmet"
-import Sidebar from "../../assets/components/sidebar"
-import Header from "../../assets/components/header"
+import Sidebar from "../../components/sidebar"
+import Header from "../../components/header"
 import { Bar,Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement } from "chart.js";
 import 'chart.js/auto';
@@ -32,18 +32,25 @@ export default function Dashboard() {
             title: {
                 display: true,
                 text: 'Ideas Submitted per Month',
-                fontSize: 20
+                font: {
+                    size: 30, // Correctly nested font size
+                },
             },
             legend: {
                 display: true,
                 position: 'right',
+                labels: {
+                    font: {
+                        size: 25, // Change this value to adjust the legend font size
+                    },
+                },
             },
             datalabels: {
                 anchor: 'end',
                 align: 'top',
                 formatter: (value) => value,
                 font: {
-                    size: 14,
+                    size: 30,
                 },
             },
         },
@@ -77,7 +84,7 @@ export default function Dashboard() {
                     return `${label}: ${value}%`;
                 },
                 font: {
-                    size: 14,
+                    size: 30,
                 },
             },
         },

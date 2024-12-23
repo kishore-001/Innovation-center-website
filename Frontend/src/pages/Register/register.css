@@ -21,14 +21,14 @@
   
   .reg-logo {
     width: 500px;
-    margin-bottom: 60px;
+    margin-bottom: 20%;
   }
   
   .reg-para {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight:400;
     color: 0;
-    margin-bottom: 50px;
+    margin-bottom: 15%;
   }
 
   .reg-para span {
@@ -43,16 +43,16 @@
 
   .reg-input-group label {
     display: block;
-    width: 350px;
-    font-size: 0.9rem;
+    width: 400px;
+    font-size: 1.5rem;
     margin-bottom: 5px;
     color: #333;
   }
   
   .reg-input-group input {
-    margin-bottom: 1px;
+    margin-bottom: 10px;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
@@ -79,7 +79,7 @@
   
   .reg-link {
     margin-top: 20px;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     color: #555;
   }
   

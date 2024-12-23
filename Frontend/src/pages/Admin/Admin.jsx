@@ -44,7 +44,9 @@ export default function Admin() {
                   <img src={icons.icon16} alt="icons" />
                   <h2>Review</h2>
               </div>
-              <div className="ad-card-4-box2"></div>
+              <div className="ad-card-4-box2">
+                review
+              </div>
             </div>
           </div>
         </div>

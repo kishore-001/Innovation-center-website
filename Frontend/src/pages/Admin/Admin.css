@@ -148,3 +148,28 @@
     background-color:#f0686a ;
 }
 
+
+
+
+/* card-4 */
+
+.ad-card-4{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.ad-card-4-box1{
+    width:15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ad-card-4-box1 img{
+    margin-top: 50px;
+}
+
+.ad-card-4-box2{
+    width:85%;
+}

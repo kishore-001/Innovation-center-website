@@ -1,0 +1,150 @@
+/* Admin body */
+
+.ad-body {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    height: calc(100vh - 20px); 
+    width: calc(100vw - 20px);
+    background-color: #C0C0C0;    
+}
+
+/* Container for header and content */
+
+.ad-container { 
+    display: flex;
+    flex-direction: column;
+    margin-left: 90px;
+    flex-grow: 1;
+    height: calc(100vh - 20px);
+    width: calc(100vw - 200px);
+    background: #C0C0C0;
+ }
+
+ /* Content */
+.ad-content {
+    width: calc(100vw - 112px);
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    background: #C0C0C0;
+    border-radius: 15px;
+}
+
+/* General card properties */
+
+.ad-card{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 30%;
+    width: 33%;
+    margin-bottom: 10px;
+}
+
+.ad-card-4{
+    background: #ffffff;
+    margin: 0;
+    height: calc(70% - 10px);
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+/* elements inside card general properties */
+
+.ad-card img{
+    height: 60px;
+    width: 60px;
+}
+
+.ad-card p{
+    font-size: 25px;
+    width: 60%;
+    text-align: center;
+    color: #8F8C8C;
+}
+
+/* Specific card property */
+
+/* card-1 */
+
+.ad-card-1 h2{
+    margin:0;
+    margin-top: 20px;
+}
+
+/* card-2 */
+
+.ad-card-2 h2{
+    margin:0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ad-card-2 input{
+    border-radius: 5px;
+    width: 60%;
+    height: 30px;
+    font-size: 15px;
+    color:#8F8C8C;
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+    border: 1px solid ;
+}
+
+.ad-content-card-box-3 {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* card-3 */
+
+.ad-card-3 h2{
+    margin:0;
+    margin-top: 20px;
+}
+
+/* button - red and blue */
+
+.ad-button-blue{
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    border:0;
+    border-radius: 15px;
+    background-color: #33A6F9;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ad-button-blue:hover{
+    background-color:#71c2fc ;
+}
+
+
+.ad-button-red{
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    border:0;
+    border-radius: 15px;
+    background-color: #F93336;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ad-button-red:hover{
+    background-color:#f0686a ;
+}
+

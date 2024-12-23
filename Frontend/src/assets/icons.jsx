@@ -10,7 +10,11 @@ import icon9 from './icons/icon9.svg'
 import icon10 from './icons/icon10.svg'
 import icon11 from './icons/icon11.png'
 import icon12 from './icons/icon12.png'
+import icon13 from './icons/icon13.png'
+import icon14 from './icons/icon14.png'
+import icon15 from './icons/icon15.png'
+import icon16 from './icons/icon16.png'
 
-const icons = {icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, icon11, icon12};
+const icons = {icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, icon11, icon12,icon13,icon14,icon15,icon16};
 
 export default icons;

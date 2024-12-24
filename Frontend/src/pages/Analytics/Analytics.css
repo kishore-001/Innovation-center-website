@@ -1,0 +1,141 @@
+/* Analytics body */
+
+.al-body {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    height: auto; 
+    width: calc(100vw - 20px);
+    background-color: #C0C0C0;    
+}
+
+/* Container for header and content */
+
+.al-container { 
+    display: flex;
+    flex-direction: column;
+    margin-left: 90px;
+    flex-grow: 1;
+    height: auto;
+    width: calc(100vw - 200px);
+    background: #C0C0C0;
+ }
+
+ /* Content */
+.al-content {
+    width: calc(100vw - 112px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #C0C0C0;
+    border-radius: 15px;
+}
+
+/* Content-box */
+
+/* Content-box-type-1 */
+
+.al-content-box-type-1{
+    background: #C0C0C0;
+    margin: 0;
+    height: 55vh;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.al-content-box-type-1 p{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.al-content-box-type-1-1
+{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.al-content-box-type-1-2
+{
+    margin-left: 5px;
+    background-color:#ffffff;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius:15px;
+    align-items: center;
+}
+
+/* Content-box-type-2 */
+
+.al-content-box-type-2{
+    background: #ffffff;
+    margin: 0;
+    height: 55vh;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.al-content-box-type-2 p{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+.al-content-box-inner{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.al-content-box-type-2-1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.al-content-box-type-2-2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+/* CANVA */
+
+.al-content-box-type-1-1 canvas
+{
+    width: 90% !important;
+}
+.al-content-box-type-1-2 canvas
+{
+    width: 56% !important;
+    height: 80% !important;
+}
+.al-content-box-type-2-1 canvas
+{
+    width: 90% !important;
+}
+.al-content-box-type-2-2 canvas
+{
+    width: 56% !important;
+    height: 80% !important;
+}

@@ -13,7 +13,7 @@ import Header from "../../components/header"
 import Ideatotal from "../../components/Charts/bar/idea-total"
 import Deptimpr from "../../components/Charts/bar/dept-impr"
 import Deptinno from "../../components/Charts/bar/dept-inno"
-import Depttotal from "../../components/Charts/bar/dept-total"
+
 
 // Pie Chart
 
@@ -22,7 +22,7 @@ import Priority from '../../components/Charts/Pie/priority'
 import Staff from '../../components/Charts/bar/staff'
 import Statusimpr  from '../../components/Charts/Pie/status-impr'
 import Statusinnov from '../../components/Charts/Pie/status-innov'
-import Ideatheme from '../../components/Charts/Pie/Idea-theme'
+
 
 
 export default function Analytic() {

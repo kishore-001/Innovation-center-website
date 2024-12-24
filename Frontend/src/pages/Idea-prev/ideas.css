@@ -1,0 +1,46 @@
+/* Ideapage body */
+.id-body {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    height: calc(100vh - 20px); 
+    width: calc(100vw - 20px);
+    background-color: #C0C0C0;    
+}
+
+/* Container for header and content */
+
+.id-container { 
+   display: flex;
+   flex-direction: column;
+   margin-left: 90px;
+   flex-grow: 1;
+   height: calc(100vh - 20px);
+   width: calc(100vw - 200px);
+   background: #C0C0C0;
+}
+
+
+
+/* Content */
+
+.id-content-1{
+    width: calc(100vw - 112px);
+    height: calc(100vh - 190px);
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff;
+}
+
+.id-content-2 {
+    margin-top: 10px;
+    width: calc(100vw - 112px);
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+}

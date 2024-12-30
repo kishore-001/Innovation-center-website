@@ -45,7 +45,7 @@ export default function Admin() {
                   <h2>Review</h2>
               </div>
               <div className="ad-card-4-box2">
-                review
+                
               </div>
             </div>
           </div>

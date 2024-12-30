@@ -1,0 +1,108 @@
+/* Ideapage body */
+.id-body {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  height: calc(100vh - 20px);
+  width: calc(100vw - 20px);
+  background-color: #c0c0c0;
+}
+
+/* Container for header and content */
+
+.id-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 90px;
+  flex-grow: 1;
+  height: calc(100vh - 20px);
+  width: calc(100vw - 200px);
+  background: #c0c0c0;
+}
+
+/* Content */
+
+.id-content-1 {
+  width: calc(100vw - 112px);
+  height: calc(100vh - 190px);
+  display: flex;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.id-content-2 {
+  margin-top: 10px;
+  width: calc(100vw - 112px);
+  height: 100px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+/* Id-content-2 Components*/
+
+.id-content-2 span{
+    margin: 0px 3% 0 3%;
+}
+
+.id-content-2 button {
+    padding: 10px;
+    color: #ffffff;
+    background: #000;
+    border: 0;
+    border-radius: 5px;
+}
+
+.id-content-2 button:hover{
+    background-color: #444444;
+}
+
+/* Table */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  border: #ddd solid 1px;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  border: #ddd solid 1px;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  border: #ddd solid 1px;
+}
+
+table tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+table td select{
+    border: 0;
+    border-radius: 5px;
+}
+
+/* Save Button */
+
+#id-save-button{
+margin-left: 70%;
+position: fixed;
+}

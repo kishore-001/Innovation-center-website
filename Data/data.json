@@ -1,9 +1,11 @@
 {
-  "user": {},
-  "review": [
-    {
-      "ID": 3153,
-      "Status": "L3"
-    }
-  ]
+    "admin": "admin",
+    "credentials": {},
+    "allowed_user": {
+        "RNT001": {},
+        "RNT002": {},
+        "RNT003": {},
+        "RNT004": {}
+    },
+    "review": []
 }

@@ -18,7 +18,7 @@ export default function IdeaPrev() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/data');
+        const response = await fetch('http://localhost:5001/api/fetch/data');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -88,16 +88,19 @@ export default function IdeaPrev() {
       Status: record["Status"],
     }));
     try {
-      const response = await axios.put('http://localhost:5001/api/update-status', recordsToUpdate);
+      const response = await axios.put('http://localhost:5001/api/update/review', recordsToUpdate);
       if (response.status === 200) {
         alert('Status updated successfully');
         setModifiedRecords({});
+        window.location.reload();
       } else {
         alert('Failed to update status');
       }
+      
     } catch (error) {
       console.error('Error updating status:', error);
       alert('Error updating status');
+      window.location.reload();
     }
   };
 

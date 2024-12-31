@@ -8,8 +8,9 @@ export default function Register() {
   const navigate = useNavigate()
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    navigate('/signin')
+    event.preventDefault();
+    const username = event.target['reg-username'].value;
+    const password = event.target['reg-password'].value;
   }
   return (
     <div className="reg-container">

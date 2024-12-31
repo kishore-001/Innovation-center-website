@@ -1,4 +1,4 @@
-// import icons from '../icons'
+import icons from '../assets/icons'
 import './header.css'
 import { useLocation } from 'react-router-dom';
 

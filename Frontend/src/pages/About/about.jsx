@@ -1,4 +1,4 @@
-import './about.css'
+import './About.css'
 import { Helmet } from 'react-helmet'
 import Sidebar from '../../components/sidebar'
 import Header from '../../components/header'

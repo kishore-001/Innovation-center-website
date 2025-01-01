@@ -9,7 +9,9 @@ from routers import (
     analytics_idea_by_month,
     analytics_idea_count,
     analytics_improvement_idea_by_month,
+    analytics_improvement_pie,
     analytics_innovation_idea_by_month,
+    analytics_innovation_pie,
     analytics_innovation_vs_improvement,
     analytics_status_count,
     analytics_theme_pie,
@@ -69,6 +71,8 @@ app.include_router(analytics_idea_by_month.router)
 app.include_router(analytics_innovation_vs_improvement.router)
 app.include_router(analytics_innovation_idea_by_month.router)
 app.include_router(analytics_improvement_idea_by_month.router)
+app.include_router(analytics_improvement_pie.router)
+app.include_router(analytics_innovation_pie.router)
 
 # sign in and sign up Api
 

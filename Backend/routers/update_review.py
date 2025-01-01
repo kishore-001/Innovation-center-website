@@ -1,12 +1,14 @@
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
 import json
 import logging
 
-# 
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+
+#
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
+
 
 class Update(BaseModel):
     Id: int
@@ -23,15 +25,19 @@ def update_status(updates: list[Update]):
             data = json.load(f)
 
         # Create a dictionary of existing reviews
-        existing_reviews = {review["Id"]: review for review in data.get("review", [])}
+        existing_reviews = {
+            review["Id"]: review for review in data.get("review", [])}
 
         # Update existing reviews or add new ones
         for update in updates:
             update_dict = update.dict()
             if update_dict["Id"] in existing_reviews:
-                existing_reviews[update_dict["Id"]]["Status"] = update_dict["Status"]
-                existing_reviews[update_dict["Id"]]["Emp_Id"] = update_dict["Emp_Id"]
-                existing_reviews[update_dict["Id"]]["Date"] = update_dict["Date"]
+                existing_reviews[update_dict["Id"]
+                                 ]["Status"] = update_dict["Status"]
+                existing_reviews[update_dict["Id"]
+                                 ]["Emp_Id"] = update_dict["Emp_Id"]
+                existing_reviews[update_dict["Id"]
+                                 ]["Date"] = update_dict["Date"]
             else:
                 existing_reviews[update_dict["Id"]] = update_dict
 

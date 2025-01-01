@@ -1,7 +1,9 @@
-from fastapi import APIRouter, HTTPException
 import json
 
+from fastapi import APIRouter, HTTPException
+
 router = APIRouter()
+
 
 @router.delete("/api/delete/user/{username}")
 async def delete_user(username: str):

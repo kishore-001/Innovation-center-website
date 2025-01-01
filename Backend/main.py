@@ -1,7 +1,28 @@
+import logging
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import logging
-from routers import api, fetch_data, fetch_review, update_review, delete_review, update_status, upload, download, add_user, remove_user , analytics_idea_count , analytics_status_count, analytics_dept_bar, analytics_theme_pie ,login, register , fetch_allowed_user, decode
+
+from routers import (
+    add_user,
+    analytics_dept_bar,
+    analytics_idea_count,
+    analytics_status_count,
+    analytics_theme_pie,
+    api,
+    decode,
+    delete_review,
+    download,
+    fetch_allowed_user,
+    fetch_data,
+    fetch_review,
+    login,
+    register,
+    remove_user,
+    update_review,
+    update_status,
+    upload,
+)
 
 app = FastAPI()
 

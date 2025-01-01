@@ -1,62 +1,67 @@
-// Charts related import
-
+import { useEffect, useState } from "react";
 import { Pie } from "react-chartjs-2";
-import {
-	Chart as ChartJS,
-	CategoryScale,
-	LinearScale,
-	BarElement,
-	Title,
-	Tooltip,
-	Legend,
-	ArcElement,
-} from "chart.js";
+import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from "chart.js";
 
-// Importing the charts ( Bar chart and Pie chart )
-
-ChartJS.register(
-	CategoryScale,
-	LinearScale,
-	BarElement,
-	Title,
-	Tooltip,
-	Legend,
-	ArcElement,
-);
+// Register the necessary components for the Pie chart
+ChartJS.register(ArcElement, Title, Tooltip, Legend);
 
 export default function Ideainnov() {
-	const pieData = {
-		labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-		datasets: [
-			{
-				label: "# of Votes",
-				data: [12, 19, 3, 5, 2, 3],
-				backgroundColor: [
-					"rgba(255, 99, 132, 0.2)",
-					"rgba(54, 162, 235, 0.2)",
-					"rgba(255, 206, 86, 0.2)",
-					"rgba(75, 192, 192, 0.2)",
-					"rgba(153, 102, 255, 0.2)",
-					"rgba(255, 159, 64, 0.2)",
-				],
-				borderColor: [
-					"rgba(255, 99, 132, 1)",
-					"rgba(54, 162, 235, 1)",
-					"rgba(255, 206, 86, 1)",
-					"rgba(75, 192, 192, 1)",
-					"rgba(153, 102, 255, 1)",
-					"rgba(255, 159, 64, 1)",
-				],
-				borderWidth: 1,
-			},
-		],
-	};
+	const [pieData, setPieData] = useState(null);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
+
+	useEffect(() => {
+		// Fetch data from the API
+		const fetchData = async () => {
+			try {
+				const response = await fetch(
+					"http://localhost:5001/api/analytics/innovation_vs_improvement",
+				);
+				if (!response.ok) {
+					throw new Error(`HTTP error! Status: ${response.status}`);
+				}
+				const data = await response.json();
+
+				// Transform the fetched data into Pie chart format
+				setPieData({
+					labels: ["Innovation", "Improvement", "Duplication"],
+					datasets: [
+						{
+							label: "# of Ideas",
+							data: [
+								data.innovation,
+								data.improvement,
+								data.duplication,
+							],
+							backgroundColor: [
+								"rgba(75, 192, 192, 0.2)",
+								"rgba(255, 159, 64, 0.2)",
+								"rgba(153, 102, 255, 0.2)",
+							],
+							borderColor: [
+								"rgba(75, 192, 192, 1)",
+								"rgba(255, 159, 64, 1)",
+								"rgba(153, 102, 255, 1)",
+							],
+							borderWidth: 1,
+						},
+					],
+				});
+				setLoading(false);
+			} catch (err) {
+				setError(err.message);
+				setLoading(false);
+			}
+		};
+
+		fetchData();
+	}, []);
 
 	const pieOptions = {
 		plugins: {
 			title: {
 				display: true,
-				text: "Votes Distribution",
+				text: "Innovation vs Improvement Distribution",
 				font: {
 					size: 30,
 				},
@@ -73,6 +78,8 @@ export default function Ideainnov() {
 		},
 	};
 
+	if (loading) return <div>Loading...</div>;
+	if (error) return <div>Error: {error}</div>;
+
 	return <Pie data={pieData} options={pieOptions} />;
 }
-

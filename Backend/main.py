@@ -8,6 +8,8 @@ from routers import (
     analytics_dept_bar,
     analytics_idea_by_month,
     analytics_idea_count,
+    analytics_improvement_idea_by_month,
+    analytics_innovation_idea_by_month,
     analytics_innovation_vs_improvement,
     analytics_status_count,
     analytics_theme_pie,
@@ -65,6 +67,8 @@ app.include_router(analytics_dept_bar.router)
 app.include_router(analytics_theme_pie.router)
 app.include_router(analytics_idea_by_month.router)
 app.include_router(analytics_innovation_vs_improvement.router)
+app.include_router(analytics_innovation_idea_by_month.router)
+app.include_router(analytics_improvement_idea_by_month.router)
 
 # sign in and sign up Api
 

@@ -92,15 +92,7 @@ export default function Ideatotal() {
 					size: 30,
 				},
 			},
-			legend: {
-				display: true,
-				position: "right",
-				labels: {
-					font: {
-						size: 20,
-					},
-				},
-			},
+			legend: null,
 		},
 	};
 

@@ -85,15 +85,7 @@ export default function Deptimpr() {
 					size: 30,
 				},
 			},
-			legend: {
-				display: true,
-				position: "right",
-				labels: {
-					font: {
-						size: 20,
-					},
-				},
-			},
+			legend: null,
 		},
 	};
 
@@ -102,4 +94,3 @@ export default function Deptimpr() {
 
 	return <Bar data={barData} options={barOptions} />;
 }
-

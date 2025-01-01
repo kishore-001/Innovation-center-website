@@ -21,12 +21,8 @@ def idea_by_month() -> List[Dict[str, Any]]:
     df["Month"] = df["Start time"].dt.month
     df["Year"] = df["Start time"].dt.year
 
-    print(df.head())
     df: pd.DataFrame = df.groupby(
         ["Year", "Month"]).size().reset_index(name="Count")
     df: pd.DataFrame = df.sort_values(by=["Year", "Month"])
 
     return df.to_dict(orient="records")
-
-
-print(idea_by_month())

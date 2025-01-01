@@ -1,14 +1,14 @@
-#root{
-    margin: 0;
-    padding: 0;
-    height: calc(100vh - 0.2px);
+#root {
+	margin: 0;
+	padding: 0;
+	height: calc(100vh - 0.2px);
 }
 
 /* General styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    width: calc(100vw);
-    overflow-x: hidden;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	width: calc(100vw);
+	overflow-x: hidden;
 }

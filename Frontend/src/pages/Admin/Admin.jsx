@@ -4,13 +4,18 @@ import Sidebar from "../../components/sidebar";
 import Header from "../../components/header";
 import icons from '../../assets/icons';
 import { useEffect, useState } from 'react';
+import FetchRole from '../../components/fetchrole';
 
 export default function Admin() {
+
+  const role = FetchRole().role;
+
   const [records, setRecords] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 7;
   const [error, setError] = useState(null);
   const [username, setUsername] = useState("");
+  const [file, setFile] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,6 +39,10 @@ export default function Admin() {
 
     fetchData();
   }, []);
+
+
+  if (role === 'admin') {
+
 
   // Pagination logic
   const indexOfLastRecord = currentPage * recordsPerPage;
@@ -101,7 +110,6 @@ export default function Admin() {
   };
 
   // Upload funtionality
-  const [file, setFile] = useState(null);
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -320,4 +328,17 @@ export default function Admin() {
       </div>
     </>
   );
+}  else {
+  return (
+    <>
+      <div className="ad-forbiddenaccess">
+        <h1>Forbidden Access</h1>
+        <p>You do not have permission to access this page.</p>
+        <button type="button" onClick={() => {
+          window.location.href = '/';
+        }}>Home</button>
+      </div>
+    </>
+  )
+}
 }

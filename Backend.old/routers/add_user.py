@@ -12,9 +12,9 @@ async def add_user(user: User):
     try:
         with open("../Data/data.json", "r+", encoding="utf-8") as file:
             data = json.load(file)
-            if user.username in data["user"]:
+            if user.username in data["allowed_user"]:
                 raise HTTPException(status_code=400, detail="User already exists")
-            data["user"][user.username] = {}
+            data["allowed_user"][user.username] = {}
             file.seek(0)
             json.dump(data, file, indent=4)
             file.truncate()

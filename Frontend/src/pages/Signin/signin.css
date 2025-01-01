@@ -80,7 +80,7 @@
   }
   
   .signin-link {
-    margin-top: 20px;
+    margin: 20px 0 0 0;
     font-size: 1.3rem;
     color: #555;
   }
@@ -94,6 +94,21 @@
     color: #007bff8a;
   }
   
+  .signin-guest {
+    margin: 20px 0 0 0;
+    font-size: 1.3rem;
+    color: #555;
+  }
+
+  .signin-guest a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signin-guest a:hover {
+    color: #007bff8a;
+  }
+
   /* Right section: Image */
   .signin-image {
     flex: 0 0 70%;

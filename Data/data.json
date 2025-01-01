@@ -1,11 +1,20 @@
 {
-    "admin": "admin",
-    "credentials": {},
+    "admin_credentials": {
+        "username": "admin",
+        "password": "admin"
+    },
+    "credentials": {
+        "RNT001": "RNT001",
+        "RNT002": "RNT002",
+        "RNT003": "RNT003",
+        "1": "1"
+    },
     "allowed_user": {
         "RNT001": {},
         "RNT002": {},
         "RNT003": {},
-        "RNT004": {}
+        "RNT004": {},
+        "1": {}
     },
     "review": []
 }

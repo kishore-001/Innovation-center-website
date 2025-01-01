@@ -1,7 +1,11 @@
 import './sidebar.css';
 import icons from './../assets/icons';
+import FetchRole from './fetchrole';
 
 export default function Sidebar() {
+
+    const role = FetchRole().role;
+
     return (
         <div className="db-sidebar">
             <div className="db-sb-icon">
@@ -28,11 +32,13 @@ export default function Sidebar() {
                     <img src={icons.icon9} alt="about" />
                 </a>
             </div>
-            <div className="db-sb-items">
-                <a href="/admin">
-                    <img src={icons.icon10} alt="settings" />
-                </a>
-            </div>
+            {role === 'admin' && (
+                <div className="db-sb-items">
+                    <a href="/admin">
+                        <img src={icons.icon10} alt="settings" />
+                    </a>
+                </div>
+            )}
         </div>
     )
 }

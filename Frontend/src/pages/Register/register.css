@@ -78,7 +78,7 @@
   }
   
   .reg-link {
-    margin-top: 20px;
+    margin: 20px 0 0 0;
     font-size: 1.3rem;
     color: #555;
   }
@@ -92,6 +92,23 @@
     color: #007bff8a;
   }
   
+
+  .reg-guest {
+    margin: 20px 0 0 0;
+    font-size: 1.3rem;
+    color: #555;
+  }
+
+  .reg-guest a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .reg-guest a:hover {
+    color: #007bff8a;
+  }
+
+
   /* Right section: Image */
   .reg-image {
     flex: 0 0 70%;

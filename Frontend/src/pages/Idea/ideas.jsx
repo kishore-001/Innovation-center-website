@@ -4,8 +4,11 @@ import Sidebar from "../../components/sidebar";
 import Header from "../../components/header";
 import { useState, useEffect } from "react";
 import axios from 'axios';
+import FetchRole from "../../components/fetchrole";
 
 export default function IdeaPrev() {
+
+  const role = FetchRole().role;
   const [records, setRecords] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 8;
@@ -96,7 +99,7 @@ export default function IdeaPrev() {
       } else {
         alert('Failed to update status');
       }
-      
+
     } catch (error) {
       console.error('Error updating status:', error);
       alert('Error updating status');
@@ -144,17 +147,21 @@ export default function IdeaPrev() {
                         </td>
                         <td>{record["Department ( நீங்கள் வேலை செய்யும் துறை )"] || "N/A"}</td>
                         <td>
-                  <select
-                    defaultValue={record["Status"] || "Pending"}
-                    onChange={(e) => handleStatusChange(index, e.target.value)}
-                  >
-                    <option value="L1">L1</option>
-                    <option value="L2">L2</option>
-                    <option value="L3">L3</option>
-                    <option value="L4">L4</option>
-                    <option value="L5">L5</option>
-                  </select>
-                </td>
+                          {role === "staff" || role === "admin" ? (
+                            <select
+                              defaultValue={record["Status"] || "Pending"}
+                              onChange={(e) => handleStatusChange(index, e.target.value)}
+                            >
+                              <option value="L1">L1</option>
+                              <option value="L2">L2</option>
+                              <option value="L3">L3</option>
+                              <option value="L4">L4</option>
+                              <option value="L5">L5</option>
+                            </select>
+                          ) : (
+                            record["Status"] || "N/A"
+                          )}
+                        </td>
                       </tr>
                     ))
                   ) : (
@@ -184,7 +191,9 @@ export default function IdeaPrev() {
             >
               Next
             </button>
-            <button id="id-save-button" onClick={handleSave}>Save</button>
+            {(role === "staff" || role === "admin") && (
+              <button id="id-save-button" onClick={handleSave}>Save</button>
+            )}
           </div>
         </div>
       </div>

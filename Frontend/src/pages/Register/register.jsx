@@ -9,8 +9,39 @@ export default function Register() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const username = event.target['reg-username'].value;
+    const username = event.target['reg-username'].value.toUpperCase();
     const password = event.target['reg-password'].value;
+    fetch('http://localhost:5001/api/fetch/allowed_user')
+      .then(response => response.json())
+      .then(data => {
+        if (data[username]) {
+          fetch('http://localhost:5001/api/register', {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+          })
+          .then(response => {
+            if (response.ok) {
+              alert('Registration Success');
+              navigate('/signin');
+            } else {
+              throw new Error('Registration failed');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('Registration failed 2');
+          });
+        } else {
+          alert('You are not permitted');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to fetch allowed usernames');
+      });
   }
   return (
     <div className="reg-container">
@@ -35,6 +66,12 @@ export default function Register() {
         </form>
         <p className="reg-link">
            have an account? <a href="/signin">Sign in</a>
+        </p>
+        <p className='reg-guest'>
+          Sign in as <a onClick={()=>{
+            window.location.href = "/";
+            document.cookie = "token=; path=/; max-age=0";
+          }}>Guest</a>
         </p>
       </div>
       <div className="reg-image">

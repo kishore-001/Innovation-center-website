@@ -6,6 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from routers import (
     add_user,
     analytics_dept_bar,
+    analytics_idea_by_month,
     analytics_idea_count,
     analytics_status_count,
     analytics_theme_pie,
@@ -61,6 +62,7 @@ app.include_router(analytics_idea_count.router)
 app.include_router(analytics_status_count.router)
 app.include_router(analytics_dept_bar.router)
 app.include_router(analytics_theme_pie.router)
+app.include_router(analytics_idea_by_month.router)
 
 # sign in and sign up Api
 

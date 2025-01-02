@@ -1,81 +1,81 @@
 /* Admin body */
 
 .ad-body {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  height: calc(100vh - 20px);
-  width: calc(100vw - 20px);
-  background-color: #c0c0c0;
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	height: calc(100vh - 20px);
+	width: calc(100vw - 20px);
+	background-color: #c0c0c0;
 }
 
 /* Container for header and content */
 
 .ad-container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 90px;
-  flex-grow: 1;
-  height: calc(100vh - 20px);
-  width: calc(100vw - 200px);
-  background: #c0c0c0;
+	display: flex;
+	flex-direction: column;
+	margin-left: 90px;
+	flex-grow: 1;
+	height: calc(100vh - 20px);
+	width: calc(100vw - 200px);
+	background: #c0c0c0;
 }
 
 /* Content */
 .ad-content {
-  width: calc(100vw - 112px);
-  height: calc(100vh - 90px);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background: #c0c0c0;
-  border-radius: 15px;
+	width: calc(100vw - 112px);
+	height: calc(100vh - 90px);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: #c0c0c0;
+	border-radius: 15px;
 }
 
 /* General card properties */
 
 .ad-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #fff;
-  border-radius: 15px;
-  height: 30%;
-  width: 33%;
-  margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 15px;
+	height: 30%;
+	width: 33%;
+	margin-bottom: 10px;
 }
 
 .ad-card-4 {
-  background: #ffffff;
-  margin: 0;
-  height: calc(70% - 10px);
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  border-radius: 15px;
+	background: #ffffff;
+	margin: 0;
+	height: calc(70% - 10px);
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 15px;
 }
 
 /* elements inside card general properties */
 
 .ad-card img {
-  height: 60px;
-  width: 60px;
+	height: 60px;
+	width: 60px;
 }
 
 .ad-card p {
-  font-size: 25px;
-  width: 60%;
-  text-align: center;
-  color: #8f8c8c;
-  margin: 25px 0 15px 0;
+	font-size: 25px;
+	width: 60%;
+	text-align: center;
+	color: #8f8c8c;
+	margin: 25px 0 15px 0;
 }
 
 .ad-card input {
-  font-size: 25px;
-  color: #8f8c8c;
-  margin: 25px 0 15px 0;
+	font-size: 25px;
+	color: #8f8c8c;
+	margin: 25px 0 15px 0;
 }
 
 /* Specific card property */
@@ -83,229 +83,229 @@
 /* card-1 */
 
 .ad-card-1 h2 {
-  margin: 0;
-  margin-top: 20px;
+	margin: 0;
+	margin-top: 20px;
 }
 
 /* card-2 */
 
 .ad-card-2 h2 {
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
+	margin: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .ad-card-2 input {
-  border-radius: 5px;
-  width: 60%;
-  height: 30px;
-  font-size: 15px;
-  color: #8f8c8c;
-  padding: 0 10px 0 10px;
-  margin-bottom: 20px;
-  border: 1px solid;
+	border-radius: 5px;
+	width: 60%;
+	height: 30px;
+	font-size: 15px;
+	color: #8f8c8c;
+	padding: 0 10px 0 10px;
+	margin-bottom: 20px;
+	border: 1px solid;
 }
 
 .ad-content-card-box-3 {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 /* card-3 */
 
 .ad-card-3 h2 {
-  margin: 0;
-  margin-top: 20px;
+	margin: 0;
+	margin-top: 20px;
 }
 
 /* button - red and blue */
 
 .ad-button-blue {
-  padding: 10px 30px 10px 30px;
-  font-size: 20px;
-  border: 0;
-  border-radius: 15px;
-  background-color: #33a6f9;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	padding: 10px 30px 10px 30px;
+	font-size: 20px;
+	border: 0;
+	border-radius: 15px;
+	background-color: #33a6f9;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .ad-button-blue:hover {
-  background-color: #71c2fc;
+	background-color: #71c2fc;
 }
 
 .ad-button-red {
-  padding: 10px 30px 10px 30px;
-  font-size: 20px;
-  border: 0;
-  border-radius: 15px;
-  background-color: #f93336;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	padding: 10px 30px 10px 30px;
+	font-size: 20px;
+	border: 0;
+	border-radius: 15px;
+	background-color: #f93336;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .ad-button-red:hover {
-  background-color: #f0686a;
+	background-color: #f0686a;
 }
 
 /* card-4 */
 
 .ad-card-4 {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 /* Box 1 */
 
 .ad-card-4-box1 {
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	width: 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .ad-card-4-box1 img {
-  margin-top: 50px;
+	margin-top: 50px;
 }
 
 .ad-card-4-box1 h2 {
-  margin-bottom: 50%;
+	margin-bottom: 50%;
 }
 
 .ad-card-4-box1 .pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
 }
 
 .ad-card-4-box1 .pagination button {
-  padding: 10px 20px;
-  margin: 0 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: #33a6f9;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
+	padding: 10px 20px;
+	margin: 0 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: #33a6f9;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
 .ad-card-4-box1 .pagination button:hover {
-  background-color: #71c2fc;
+	background-color: #71c2fc;
 }
 
 /* Box 2 */
 
 .ad-card-4-box2 {
-  width: 85%;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  align-items: center;
+	width: 85%;
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	align-items: center;
 }
 
 .ad-card-4-box2 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
 }
 
 .ad-card-4-box2 table th,
 .ad-card-4-box2 table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-  font-size: 1.5rem;
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+	font-size: 1.5rem;
 }
 
 .ad-card-4-box2 table tbody button {
-  margin: 15px;
-  padding: 5px 20px 5px 20px;
-  background-color: #33a6f9;
-  color: white;
-  border: 0;
-  border-radius: 5px;
+	margin: 15px;
+	padding: 5px 20px 5px 20px;
+	background-color: #33a6f9;
+	color: white;
+	border: 0;
+	border-radius: 5px;
 }
 
 .ad-card-4-box2 table tbody button:hover {
-  background-color: #71c2fc;
+	background-color: #71c2fc;
 }
 
 .ad-card-4-box2 table th {
-  background-color: #f2f2f2;
-  color: black;
-  text-align: center;
+	background-color: #f2f2f2;
+	color: black;
+	text-align: center;
 }
 
 .ad-card-4-box2 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .ad-card-4-box2 .pagination button {
-  padding: 10px 20px;
-  margin: 0 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: #33a6f9;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
+	padding: 10px 20px;
+	margin: 0 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: #33a6f9;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
 .ad-card-4-box2 .pagination button:hover {
-  background-color: #71c2fc;
+	background-color: #71c2fc;
 }
 
 .error-message {
-  margin-bottom: 10px;
-  font-size: 2rem;
-  font-weight: 500;
+	margin-bottom: 10px;
+	font-size: 2rem;
+	font-weight: 500;
 }
 
 .ad-forbiddenaccess {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f8d7da;
-  color: #721c24;
-  text-align: center;
-  padding: 20px;
-  border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f8d7da;
+	color: #721c24;
+	text-align: center;
+	padding: 20px;
+	border-radius: 15px;
 }
 
 .ad-forbiddenaccess h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+	font-size: 3rem;
+	margin-bottom: 20px;
 }
 
 .ad-forbiddenaccess p {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
 }
 
 .ad-forbiddenaccess button {
-  margin-top: 50px;
-  padding: 10px 30px;
-  font-size: 20px;
-  border: 0;
-  border-radius: 15px;
-  background-color: #721c24;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	margin-top: 50px;
+	padding: 10px 30px;
+	font-size: 20px;
+	border: 0;
+	border-radius: 15px;
+	background-color: #721c24;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .ad-forbiddenaccess button:hover {
-  background-color: #a94442;
+	background-color: #a94442;
 }

@@ -1,130 +1,127 @@
-
 /* Dashboard body */
 .db-body {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    height: calc(100vh - 20px); 
-    width: calc(100vw - 20px);
-    background-color: #C0C0C0;    
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	height: calc(100vh - 20px);
+	width: calc(100vw - 20px);
+	background-color: #c0c0c0;
 }
 
 /* Container for header and content */
 
-.db-container { 
-   display: flex;
-   flex-direction: column;
-   margin-left: 90px;
-   flex-grow: 1;
-   height: calc(100vh - 20px);
-   width: calc(100vw - 200px);
-   background: #C0C0C0;
+.db-container {
+	display: flex;
+	flex-direction: column;
+	margin-left: 90px;
+	flex-grow: 1;
+	height: calc(100vh - 20px);
+	width: calc(100vw - 200px);
+	background: #c0c0c0;
 }
 
 /* Content */
 .db-content {
-    width: calc(100vw - 112px);
-    height: calc(100vh - 90px);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    background: #C0C0C0;;
+	width: calc(100vw - 112px);
+	height: calc(100vh - 90px);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: #c0c0c0;
 }
 
-.db-card{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 15px;
-    height: 30%;
-    width: 33%;
-    margin-bottom: 10px;
+.db-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 15px;
+	height: 30%;
+	width: 33%;
+	margin-bottom: 10px;
 }
 
-.db-card:last-child{
-    background: #CDCDCD;
-    margin: 0;
-    height: calc(70% - 10px);
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
+.db-card:last-child {
+	background: #cdcdcd;
+	margin: 0;
+	height: calc(70% - 10px);
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .db-card img {
-    margin:0 0 10px 0;
-    border-radius: 15px 15px 0 0;
-    height: 100px;
-    width: 100px;
-    
+	margin: 0 0 10px 0;
+	border-radius: 15px 15px 0 0;
+	height: 100px;
+	width: 100px;
 }
 
 .db-card-text {
-    color:#1e1b1b;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 0;
+	color: #1e1b1b;
+	font-size: 25px;
+	font-weight: bold;
+	margin: 0;
 }
 
-.db-card-no{
-    color:black;
-    font-size: 35px;
-    margin:0;
-    margin: 0 0 10px 0;
+.db-card-no {
+	color: black;
+	font-size: 35px;
+	margin: 0;
+	margin: 0 0 10px 0;
 }
 
-.db-submit{
-        margin-top: 20px;
-        width: 100px;
-        padding: 10px;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
+.db-submit {
+	margin-top: 20px;
+	width: 100px;
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
 .db-submit:hover {
-    background-color: #333;
+	background-color: #333;
 }
 
-.db-bar{
-    margin-right: 5px;
-    background: #fff;
-    height:100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-
+.db-bar {
+	margin-right: 5px;
+	background: #fff;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
 }
 
-.db-bar canvas{
-    width: 90% !important;
-    height: auto !important;
-    margin-bottom: 30px;
+.db-bar canvas {
+	width: 90% !important;
+	height: auto !important;
+	margin-bottom: 30px;
 }
 
-.db-pie{
-    margin-left: 5px;
-    background: #fff;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
+.db-pie {
+	margin-left: 5px;
+	background: #fff;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
 }
 
-.db-pie canvas{
-    width: 80% !important;
-    height: 80% !important;
-    margin-bottom: 20px;
+.db-pie canvas {
+	width: 80% !important;
+	height: 80% !important;
+	margin-bottom: 20px;
 }

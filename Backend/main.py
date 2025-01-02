@@ -1,7 +1,34 @@
+import logging
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import logging
-from routers import api, fetch_data, fetch_review, update_review, delete_review, update_status, upload, download, add_user, remove_user , analytics_idea_count , analytics_status_count, analytics_dept_bar, analytics_theme_pie ,login, register , fetch_allowed_user, decode
+
+from routers import (
+    add_user,
+    analytics_dept_bar,
+    analytics_idea_by_month,
+    analytics_idea_count,
+    analytics_improvement_bar,
+    analytics_improvement_pie,
+    analytics_innovation_bar,
+    analytics_innovation_pie,
+    analytics_innovation_vs_improvement,
+    analytics_status_count,
+    analytics_theme_pie,
+    api,
+    decode,
+    delete_review,
+    download,
+    fetch_allowed_user,
+    fetch_data,
+    fetch_review,
+    login,
+    register,
+    remove_user,
+    update_review,
+    update_status,
+    upload,
+)
 
 app = FastAPI()
 
@@ -40,6 +67,12 @@ app.include_router(analytics_idea_count.router)
 app.include_router(analytics_status_count.router)
 app.include_router(analytics_dept_bar.router)
 app.include_router(analytics_theme_pie.router)
+app.include_router(analytics_idea_by_month.router)
+app.include_router(analytics_innovation_vs_improvement.router)
+app.include_router(analytics_improvement_bar.router)
+app.include_router(analytics_innovation_bar.router)
+app.include_router(analytics_innovation_pie.router)
+app.include_router(analytics_improvement_pie.router)
 
 # sign in and sign up Api
 

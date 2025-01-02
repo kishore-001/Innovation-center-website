@@ -1,5 +1,6 @@
-from fastapi import APIRouter
 import json
+
+from fastapi import APIRouter
 
 router = APIRouter()
 
@@ -8,7 +9,7 @@ router = APIRouter()
 def allowed_user():
     data_file = "../Data/data.json"
 
-    with open(data_file, encoding='utf-8') as f:
+    with open(data_file, encoding="utf-8") as f:
         data = json.load(f)
 
     return data.get("allowed_user")

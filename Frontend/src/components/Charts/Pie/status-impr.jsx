@@ -1,65 +1,101 @@
-// Charts related import
+import { useEffect, useState } from "react";
+import { Pie } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from "chart.js";
 
-import { Pie } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement } from 'chart.js';
+// Register necessary components for the Pie chart
+ChartJS.register(ArcElement, Title, Tooltip, Legend);
 
-// Importing the charts ( Bar chart and Pie chart )
+export default function StatusImpr() {
+	const [pieData, setPieData] = useState(null);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement);
+	useEffect(() => {
+		// Fetch data from the API
+		const fetchData = async () => {
+			try {
+				const response = await fetch(
+					"http://localhost:5001/api/analytics/impr_pie_chart_data",
+				);
+				if (!response.ok) {
+					throw new Error(`HTTP error! Status: ${response.status}`);
+				}
+				const data = await response.json();
 
+				// Map the Status and Count into the Pie chart format
+				const labels = data.map((item) => item.Status);
+				const counts = data.map((item) => item.Count);
 
-export default function Statusidea(){
+				// Set the Pie chart data
+				setPieData({
+					labels,
+					datasets: [
+						{
+							label: "Innovation Status",
+							data: counts,
+							backgroundColor: [
+								"rgba(75, 192, 192, 0.7)",
+								"rgba(255, 99, 132, 0.7)",
+							],
+							borderColor: [
+								"rgba(75, 192, 192, 1)",
+								"rgba(255, 99, 132, 1)",
+							],
+							borderWidth: 1,
+						},
+					],
+				});
+				setLoading(false);
+			} catch (err) {
+				setError(err.message);
+				setLoading(false);
+			}
+		};
 
-    const pieData = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [
-            {
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                ],
-                borderWidth: 1,
-            },
-        ],
-    };
-    
-    const pieOptions = {
-        plugins: {
-            title: {
-                display: true,
-                text: 'Votes Distribution',
-                font: {
-                    size: 30,
-                },
-            },
-            legend: {
-                display: true,
-                position: 'right',
-                labels: {
-                    font: {
-                        size: 25,
-                    },
-                },
-            },
-        },
-    };
+		fetchData();
+	}, []);
 
+	const pieOptions = {
+		plugins: {
+			title: {
+				display: true,
+				text: "Department-wise Innovation Data",
+				font: {
+					size: 20,
+				},
+			},
+			legend: {
+				display: true,
+				position: "right",
+				labels: {
+					font: {
+						size: 15,
+					},
+					color: "#333", // Legend text color
+				},
+			},
+			tooltip: {
+				callbacks: {
+					label: function (tooltipItem) {
+						const dataset = tooltipItem.dataset;
+						const currentValue =
+							dataset.data[tooltipItem.dataIndex];
+						const total = dataset.data.reduce((a, b) => a + b, 0);
+						const percentage = (
+							(currentValue / total) *
+							100
+						).toFixed(2);
+						return `${dataset.label}: ${currentValue} (${percentage}%)`;
+					},
+				},
+			},
+		},
+	};
 
-    return(
-        <Pie data={pieData} options={pieOptions} />
-    )
+	// Display loading state or error if occurred
+	if (loading) return <div>Loading...</div>;
+	if (error) return <div>Error: {error}</div>;
+
+	// Render Pie chart once data is loaded
+	return <Pie data={pieData} options={pieOptions} />;
 }

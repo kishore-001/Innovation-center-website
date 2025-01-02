@@ -1,11 +1,13 @@
-from fastapi import File, UploadFile, APIRouter
-import shutil
 import os
+import shutil
+
+from fastapi import APIRouter, File, UploadFile
 
 router = APIRouter()
 
 UPLOAD_FOLDER = os.path.abspath("../Data")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 
 @router.post("/api/upload")
 async def upload_file(file: UploadFile = File(...)):
@@ -17,3 +19,4 @@ async def upload_file(file: UploadFile = File(...)):
         return {"message": "File uploaded successfully."}
     except OSError as e:
         return {"error": str(e)}
+

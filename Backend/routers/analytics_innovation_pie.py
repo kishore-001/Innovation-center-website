@@ -22,14 +22,9 @@ def inno_pie_chart_data() -> List[Dict[str, Any]]:
 
     # Get no. of impr in each department
     impr_dept_df: pd.DataFrame = (
-        impr_df.groupby("Department ( நீங்கள் வேலை செய்யும் துறை )")
-        .size()
-        .reset_index(name="Count")
+        impr_df.groupby("Status").size().reset_index(name="Count")
     )
     impr_dept_df: pd.DataFrame = impr_dept_df.sort_values(
         by=["Count"], ascending=False)
-    impr_dept_df: pd.DataFrame = impr_dept_df.rename(
-        columns={"Department ( நீங்கள் வேலை செய்யும் துறை )": "Department"}
-    )
 
     return impr_dept_df.to_dict(orient="records")

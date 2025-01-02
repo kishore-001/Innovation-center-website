@@ -31,7 +31,7 @@ export default function Deptimpr() {
 		const fetchData = async () => {
 			try {
 				const response = await fetch(
-					"http://localhost:5001/api/analytics/impr_pie_chart_data",
+					"http://localhost:5001/api/analytics/impr_bar_chart_data",
 				);
 				if (!response.ok) {
 					throw new Error(`HTTP error! Status: ${response.status}`);

@@ -22,21 +22,24 @@ export default function Ideainnov() {
 				}
 				const data = await response.json();
 
+				// Ensure data properties exist and are valid numbers
+				const {
+					innovation = 0,
+					improvement = 0,
+					duplication = 0,
+				} = data;
+
 				// Transform the fetched data into Pie chart format
 				setPieData({
 					labels: ["Innovation", "Improvement", "Duplication"],
 					datasets: [
 						{
 							label: "# of Ideas",
-							data: [
-								data.innovation,
-								data.improvement,
-								data.duplication,
-							],
+							data: [innovation, improvement, duplication],
 							backgroundColor: [
-								"rgba(75, 192, 192, 0.2)",
-								"rgba(255, 159, 64, 0.2)",
-								"rgba(153, 102, 255, 0.2)",
+								"rgba(75, 192, 192, 0.5)",
+								"rgba(255, 159, 64, 0.5)",
+								"rgba(153, 102, 255, 0.5)",
 							],
 							borderColor: [
 								"rgba(75, 192, 192, 1)",
@@ -63,7 +66,7 @@ export default function Ideainnov() {
 				display: true,
 				text: "Innovation vs Improvement Distribution",
 				font: {
-					size: 30,
+					size: 24,
 				},
 			},
 			legend: {
@@ -71,7 +74,21 @@ export default function Ideainnov() {
 				position: "right",
 				labels: {
 					font: {
-						size: 25,
+						size: 16,
+					},
+				},
+			},
+			tooltip: {
+				callbacks: {
+					label: function (tooltipItem) {
+						const dataset = tooltipItem.dataset;
+						const value = dataset.data[tooltipItem.dataIndex];
+						const total = dataset.data.reduce(
+							(acc, cur) => acc + cur,
+							0,
+						);
+						const percentage = ((value / total) * 100).toFixed(2);
+						return `${tooltipItem.label}: ${value} (${percentage}%)`;
 					},
 				},
 			},

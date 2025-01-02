@@ -5,7 +5,7 @@ import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from "chart.js";
 // Register necessary components for the Pie chart
 ChartJS.register(ArcElement, Title, Tooltip, Legend);
 
-export default function Statusinnov() {
+export default function StatusInnov() {
 	const [pieData, setPieData] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
@@ -22,8 +22,8 @@ export default function Statusinnov() {
 				}
 				const data = await response.json();
 
-				// Map the department names and counts into the Pie chart format
-				const labels = data.map((item) => item.Department);
+				// Map the Status and Count into the Pie chart format
+				const labels = data.map((item) => item.Status);
 				const counts = data.map((item) => item.Count);
 
 				// Set the Pie chart data
@@ -31,27 +31,15 @@ export default function Statusinnov() {
 					labels,
 					datasets: [
 						{
-							label: "# of Ideas",
+							label: "Innovation Status",
 							data: counts,
 							backgroundColor: [
-								"rgba(75, 192, 192, 0.2)",
-								"rgba(255, 159, 64, 0.2)",
-								"rgba(153, 102, 255, 0.2)",
-								"rgba(255, 99, 132, 0.2)",
-								"rgba(54, 162, 235, 0.2)",
-								"rgba(255, 206, 86, 0.2)",
-								"rgba(75, 192, 192, 0.2)",
-								"rgba(153, 102, 255, 0.2)", // Add more colors if needed
+								"rgba(75, 192, 192, 0.7)",
+								"rgba(255, 99, 132, 0.7)",
 							],
 							borderColor: [
 								"rgba(75, 192, 192, 1)",
-								"rgba(255, 159, 64, 1)",
-								"rgba(153, 102, 255, 1)",
 								"rgba(255, 99, 132, 1)",
-								"rgba(54, 162, 235, 1)",
-								"rgba(255, 206, 86, 1)",
-								"rgba(75, 192, 192, 1)",
-								"rgba(153, 102, 255, 1)", // Add more colors if needed
 							],
 							borderWidth: 1,
 						},
@@ -73,7 +61,7 @@ export default function Statusinnov() {
 				display: true,
 				text: "Department-wise Innovation Data",
 				font: {
-					size: 30,
+					size: 20,
 				},
 			},
 			legend: {
@@ -81,7 +69,23 @@ export default function Statusinnov() {
 				position: "right",
 				labels: {
 					font: {
-						size: 25,
+						size: 15,
+					},
+					color: "#333", // Legend text color
+				},
+			},
+			tooltip: {
+				callbacks: {
+					label: function (tooltipItem) {
+						const dataset = tooltipItem.dataset;
+						const currentValue =
+							dataset.data[tooltipItem.dataIndex];
+						const total = dataset.data.reduce((a, b) => a + b, 0);
+						const percentage = (
+							(currentValue / total) *
+							100
+						).toFixed(2);
+						return `${dataset.label}: ${currentValue} (${percentage}%)`;
 					},
 				},
 			},

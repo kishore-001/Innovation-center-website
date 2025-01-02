@@ -41,7 +41,7 @@ export default function Admin() {
 		fetchData();
 	}, []);
 
-	if (!(role === "admin")) {
+	if ((role === "admin")) {
 		// Pagination logic
 		const indexOfLastRecord = currentPage * recordsPerPage;
 		const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
@@ -82,6 +82,7 @@ export default function Admin() {
 						method: "PUT",
 						headers: {
 							"Content-Type": "application/json",
+							"Access-Control-Allow-Origin":""
 						},
 						body: JSON.stringify({ Id, Status: Status }),
 					},
@@ -253,7 +254,7 @@ export default function Admin() {
 								<h2>Add staff</h2>
 								<input
 									type="text"
-									placeholder="User Name"
+									placeholder="Employee ID"
 									value={username}
 									onChange={(e) =>
 										setUsername(e.target.value)

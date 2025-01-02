@@ -143,32 +143,32 @@ export default function IdeaPrev() {
 												<td>{record["ID"]}</td>
 												<td>{record["Employee ID"]}</td>
 												<td>
-													{formatDate(
-														record["Start time"],
-													)}
+													{
+														record["Start time"].slice(0, 10)
+													}
 												</td>
 												<td>
 													{record[
-														"Please Enter your Name"
+														"Name"
 													] || "N/A"}
 												</td>
 												<td>
 													{record[
-														"What is your Innovative idea which you propose for the mentioned concern? ( நீங்கள் குறிப்பிட்டுள்ள  பிரச்சனையை சரிசெய்ய உங்களின் புதுமையான யோசனை என்ன?"
+														"Idea"
 													] || "N/A"}
 												</td>
 												<td>
 													{record[
-														"Department ( நீங்கள் வேலை செய்யும் துறை )"
+														"Department"
 													] || "N/A"}
 												</td>
 												<td>
 													{role === "staff" ||
-													role === "admin" ? (
+														role === "admin" ? (
 														<select
 															defaultValue={
 																record[
-																	"Status"
+																"Status"
 																] || "Pending"
 															}
 															onChange={(e) =>
@@ -179,20 +179,20 @@ export default function IdeaPrev() {
 																)
 															}
 														>
-															<option value="L1">
-																L1
+															<option value="Feasible ">
+																Feasible
 															</option>
-															<option value="L2">
-																L2
+															<option value="Not Feasible">
+																Not Feasible
 															</option>
-															<option value="L3">
-																L3
+															<option value="Implemented">
+																Implemented
 															</option>
-															<option value="L4">
-																L4
+															<option value="Understudy">
+																Understudy
 															</option>
-															<option value="L5">
-																L5
+															<option value="Parked for future">
+																Parked for future
 															</option>
 														</select>
 													) : (

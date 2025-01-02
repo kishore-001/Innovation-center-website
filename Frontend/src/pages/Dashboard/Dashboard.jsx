@@ -64,7 +64,7 @@ export default function Dashboard() {
 							<img src={images.img4} alt="completed" />
 							<p className="db-card-no">{statusCount}</p>
 							<p className="db-card-text">
-								Total Number of Ideas Implemended
+								Total Number of Ideas Feasible
 							</p>
 						</div>
 						<div className="db-card">

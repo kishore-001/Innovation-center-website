@@ -15,6 +15,11 @@ const FetchRole = () => {
 						withCredentials: true,
 					},
 				);
+				if (!response.data.role || !response.data.username) {
+					setRole("visitor");
+					setUsername("visitor");
+					return;
+				}
 				setRole(response.data.role);
 				setUsername(response.data.username);
 			} catch (error) {

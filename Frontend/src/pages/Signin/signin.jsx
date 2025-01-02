@@ -68,7 +68,7 @@ export default function Signin() {
 							type="text"
 							id="signin-username"
 							name="signin-username"
-							placeholder="Enter your username"
+							placeholder="Enter your Emp-id"
 							required
 						/>
 					</div>

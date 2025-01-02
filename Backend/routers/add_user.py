@@ -12,6 +12,7 @@ class User(BaseModel):
 
 @router.post("/api/add/user")
 async def add_user(user: User):
+    user.username=user.username.upper()
     try:
         with open("../Data/data.json", "r+", encoding="utf-8") as file:
             data = json.load(file)

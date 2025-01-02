@@ -103,7 +103,7 @@
 }
 
 .db-bar canvas {
-	width: 90% !important;
+	width: 100% !important;
 	height: auto !important;
 	margin-bottom: 30px;
 }

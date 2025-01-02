@@ -3,18 +3,10 @@
         "username": "admin",
         "password": "admin"
     },
-    "credentials": {
-        "RNT001": "RNT001",
-        "RNT002": "RNT002",
-        "RNT003": "RNT003",
-        "1": "1"
-    },
+    "credentials": {},
     "allowed_user": {
-        "RNT001": {},
-        "RNT002": {},
-        "RNT003": {},
-        "RNT004": {},
-        "1": {}
+        "rnt0061": {},
+        "RNT007": {}
     },
     "review": []
 }

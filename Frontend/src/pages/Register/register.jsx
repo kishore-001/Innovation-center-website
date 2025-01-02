@@ -67,7 +67,7 @@ export default function Register() {
 							type="text"
 							id="reg-username"
 							name="reg-username"
-							placeholder="Enter your username"
+							placeholder="Enter your Emp-id"
 						/>
 					</div>
 					<div className="reg-input-group">

@@ -6,7 +6,6 @@ router = APIRouter()
 
 # Define the request body model
 
-
 class StatusUpdateRequest(BaseModel):
     Id: int
     Status: str

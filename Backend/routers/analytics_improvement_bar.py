@@ -1,9 +1,8 @@
 import os
-import sys
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 
 import pandas as pd
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 
 router = APIRouter()
 
